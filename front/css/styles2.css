@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+@import url("lng-select.css?v=3");
+@import url("relate-app.css?v=3");
+@import url("footer-item.css?v=3");
+
+*{font-family: "メイリオ", Meiryo,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",  Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, /*sup,*/ tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight:normal;
+	font-size:100%;
+	
+	list-style:none;
+}
+/*- @media非対応のブラウザは980pxにしかならない -*/
+/*
+body {min-width:980px;}
+@media screen and (max-width:979px){
+	body {min-width:auto;}
+}
+*/
+
+div#wrapper{
+	position:relative;
+	height:100%;
+	min-height:100%;
+}
+
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+input, textarea{
+	margin: 0;
+	padding: 0;
+}
+
+table{
+    border-collapse: collapse; 
+    border-spacing:0;
+    width:100%;
+}
+strong,b{font-weight:bold;}
+caption, th{  text-align: left;}
+a:focus {outline:none;}
+a:hover{backface-visibility: hidden;}
+
+/*-clear_fix-*/
+.cfix {zoom:1;}
+.cfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+	font-size: 0.1em;
+	line-height: 0;
+}
+* html .cfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.grid{letter-spacing: -.40em;}
+	.grid>*{
+		letter-spacing: normal;
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		vertical-align: bottom;
+		vertical-align: top;
+	}
+
+.flex{letter-spacing: -.40em;}
+	.flex>*{
+		letter-spacing: normal;
+		*display: inline;
+		*zoom: 1;
+		vertical-align: top;
+		box-sizing: border-box;
+		width: 50%;
+	}
+	.flex>*:not(style){
+		display: inline-block;
+	}
+
+.youtube-embed-area{
+	margin: auto;
+	height: 0;
+	padding-top: 43.75%;
+	padding-top: 67%;
+	padding-top: 57%;
+	position: relative;
+}
+	.youtube-embed-area iframe{
+		position:absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+.both{clear:both;}
+.inline_block {  
+	display: inline-block;  
+	*display: inline;  
+	*zoom: 1;  
+}
+a img:hover{border:none;}
+
+rt{
+	font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/*メイリオのルビは上につきすぎるのでルビだけフォント変更*/
+}
+
+
+/*- 2020.6 header style -*/
+
+.konami-header{
+	width: 100%;
+	height: 37px;
+}
+	.konami-header > a:first-child{
+		display: inline-block;
+		position: absolute;
+		left: 0; top: 0;
+	}
+	.konami-header > a:first-child img{width: 130px;}
+
+/* old--------------------- */
+#konami_header {zoom:1;}
+#konami_header:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+	font-size: 0.1em;
+	line-height: 0;
+}
+* html #konami_header {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+#konami_logo{
+	display:block;
+	width:130px;
+	float:left;
+}
+#konami_logo img{
+	display:block;
+	width:130px;
+}
+
+/* card_battle / wcs2017 */
+
+#konami_footer{
+	font-size:70%;
+	line-height:1em;
+	padding:15px 0;
+	color:#777;
+	margin-bottom:0px;
+}
+	#konami_footer>div{
+		margin:auto;
+		max-width:980px;
+		text-align:left;
+	}
+	#konami_footer>div>*{display:block;}
+	#konami_footer small{float:right;}
+	#konami_footer ul{
+		float:left;
+		letter-spacing:-.40em;
+	}
+		#konami_footer ul li{
+			display:inline-block;
+			*display:inline;
+			*zoom:1;
+			letter-spacing:normal;
+			padding:0 8px;
+			border-left:1px solid #333;
+		}
+		#konami_footer ul li:first-child{
+			border:none;
+			padding-left:0;
+		}
+		#konami_footer ul li a{
+			color:#777;
+			text-decoration:none;
+		}
+		#konami_footer a:hover{color:#ccc;}
+		#konami_footer small{
+			color: #888;
+		}
+@media screen and (max-width:979px){ /*- TB -*/
+	#konami_footer>div{text-align:center;}
+	#konami_footer>div>*{float:none;margin:auto;}
+	#konami_footer>div>ul{margin-bottom:10px;}
+}
+@media screen and (max-width:767px){ /*- SP -*/
+	#konami_footer{padding:10px 0 5px;}
+	#konami_footer div ul{
+		float:none;
+		margin:0px 2px;
+	}
+	#konami_footer div ul li{
+		display:inline-block;
+		padding:0;
+		border:none;
+		width:50%;
+	}
+	#konami_footer div ul li a{
+		padding:10px 0;
+		display:block;
+		border:1px solid #333;
+		margin:2px;
+		border-radius:5px;
+	}
+	#konami_footer>div>ul>li.ygo_ptl{width:100%;}
+	#konami_footer>div>ul>li.ygo_ptl a{font-weight:bold;font-size:120%;}
+	#konami_footer small{padding:10px 0 5px;}
+}
